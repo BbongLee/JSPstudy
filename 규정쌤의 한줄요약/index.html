@@ -1,0 +1,40 @@
+
+<html>
+<head>
+<title>로그인 페이지</title>
+
+<link rel=stylesheet type="text/css" href="cs.css">
+<script language="javascript">
+	function loginCheck(){
+		if(document.frm01.id.value==""){
+			alert("아이디 입력 하세요!");
+			document.frm01.id.focus();
+			return;
+		}if(document.frm01.pass.value==""){
+			alert("패스워드 입력 하세요!");
+			document.frm01.pw.focus();
+			return;
+		}
+		alert("아이디 :"+document.frm01.id.value+"비밀번호 : "+document.frm01.pass.value);
+	}
+</script>
+</style>
+</head>
+<body>
+<h1>방문해주셔서 감사합니다^0^</h1> //마크업언어
+<hr>
+
+<form id="frm01">
+아이디 &nbsp;&nbsp;&nbsp;: <input type="text" name="id" size=11>
+<br>
+비밀번호 : <input type="password" name="pw" size=11>
+<br><br>
+<input type="button" value="로그인" onclick="loginCheck()">
+
+</form>
+
+<hr>
+<h3>즐거운 하루 되세요 !</h3>
+
+</body>
+</html>

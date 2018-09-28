@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="StartJSP" path="/StartJSP" reloadable="true" source="org.eclipse.jst.jee.server:StartJSP"/></Host>
+      <Context docBase="StartJSP" path="/StartJSP" reloadable="true" source="org.eclipse.jst.jee.server:StartJSP"/><Context docBase="Login_Project" path="/Login_Project" reloadable="true" source="org.eclipse.jst.jee.server:Login_Project"/><Context docBase="Study_Project" path="/Study_Project" reloadable="true" source="org.eclipse.jst.jee.server:Study_Project"/><Context docBase="Template" path="/Template" reloadable="true" source="org.eclipse.jst.jee.server:Template"/><Context docBase="chapter6" path="/chapter6" reloadable="true" source="org.eclipse.jst.jee.server:chapter6"/><Context docBase="3514" path="/3514" reloadable="true" source="org.eclipse.jst.jee.server:3514"/><Context docBase="Surv" path="/Surv" reloadable="true" source="org.eclipse.jst.jee.server:Surv"/><Context docBase="chapter7" path="/chapter7" reloadable="true" source="org.eclipse.jst.jee.server:chapter7"/><Context docBase="board" path="/board" reloadable="true" source="org.eclipse.jst.jee.server:board"/><Context docBase="chapter08" path="/chapter08" reloadable="true" source="org.eclipse.jst.jee.server:chapter08"/><Context docBase="chapter09" path="/chapter09" reloadable="true" source="org.eclipse.jst.jee.server:chapter09"/><Context docBase="chapter10" path="/chapter10" reloadable="true" source="org.eclipse.jst.jee.server:chapter10"/><Context docBase="MISO" path="/MISO" reloadable="true" source="org.eclipse.jst.jee.server:MISO"/></Host>
     </Engine>
   </Service>
 </Server>
